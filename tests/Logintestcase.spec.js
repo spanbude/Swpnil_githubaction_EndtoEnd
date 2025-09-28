@@ -1,5 +1,5 @@
 const {test,expect}=require('@playwright/test');
-const { clear } = require('console');
+
 
 
 test('TC001',async({page})=>{
