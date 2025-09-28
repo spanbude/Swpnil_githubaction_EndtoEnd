@@ -11,3 +11,17 @@ console.log("ending first TC001");
 
 });
 
+
+test('TC002',async({page})=>{
+console.log("staring the tc")
+await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+await page.locator("//input[@placeholder='Username']").fill("Admin");
+await page.locator("//input[@placeholder='Password']").fill("admin123")
+await page.locator("//button[@type='submit']").click();
+await page.waitForTimeout(3000)
+console.log(await page.title())
+await expect(page).toHaveTitle("OrangeHRM")
+console.log("ending first TC002");
+
+});
+
